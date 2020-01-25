@@ -1,38 +1,284 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+    background-color: #111213;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.navbar {
+    color: #f1eeee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000;
+    border-bottom: .5px solid #f1eeee;
+}
+
+.navbar>div {
+    padding: 0px 200px;
+}
+
+#name {
+    padding-top: 5px;
+    height: 50px;
+    width: 150px;
+}
+
+#logo {
+    height: 50px;
+    width: 50px;
+    padding-top: 5px;
+    padding-bottom: 6px;
+    padding-right: 10px;
+}
+
+.account-type {
+    font-size: 19px;
+}
+
+.main {
+    padding: 0px 500px;
+}
+
+.acc-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 50px;
+    padding-top: 20px;
+    margin-bottom: 0px;
+    border-bottom: 1px solid white;
+}
+
+.acc-info>div {
+    padding: 0px 120px;
+}
+
+#profile-pic {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    padding: 20px;
+}
+
+.profile-info-sec {
+    color: white;
+    font-size: 18px;
+}
+
+.profile-info-sec>p {
+    padding: 10px;
+}
+
+.posts {
+    padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.post-image {
+    height: 293px;
+    width: 293px;
+    padding-bottom: 20px;
+}
+.share-links {
+    color: white;
+    border-bottom: 1px solid white;
+    padding: 10px;
+}
+.share-links>a {
+    margin:0px 8px;
+}
+.share-btn {
+    display: inline-block;
+    color: #ffffff;
+    border: none;
+    padding: 0.5em 1em;
+    outline: none;
+    text-align: center;
+    font-size: 0.9em;
+    margin: 0 0.2em;
   }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  
+  .share-btn:focus,
+  .share-btn:hover {
+    text-decoration: none;
+    opacity: 0.8;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .share-btn:active {
+    color: #e2e2e2;
   }
+  
+  .share-btn.twitter { background: #55acee; }
+  .share-btn.google-plus { background: #dd4b39; }
+  .share-btn.facebook { background: #3B5998; }
+  .share-btn.stumbleupon { background: #EB4823; }
+  .share-btn.reddit { background: #ff5700; }
+  .share-btn.hackernews { background: #ff6600; }
+  .share-btn.linkedin    { background: #4875B4; }
+  .share-btn.email { background: #444444; }
+  
+.auth-loading {
+    text-align: center;
+    margin-top: 20%;
+
+}
+.auth-loading>img {
+    height: 50px;
+    width: 50px;
+}
+.auth-loading>p{
+    color: white;
+    font-size: 15px;
+}
+.insta-login {
+    display: flex;
+    justify-content: center;
+    margin-top: 20%;
+}
+.insta-login>button:hover {
+    cursor: pointer;
+}
+.login-logo{
+    height: 50px;
+    width: 50px;
+}
+.login-text {
+    padding-bottom: 10px;
+    font-size: 20px;
+}
+@media only screen and (max-width: 1600px) {
+    .main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0px 150px;
+    }
+    .navbar>div {
+        padding: 0px 150px;
+    }
+}
+@media only screen and (max-width: 1024px) {
+    .main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 0px 65px;
+    }
+    .navbar>div {
+        padding: 0px 50px;
+    }
+    .share-links {
+        color: white;
+        border-bottom: 1px solid white;
+        padding: 10px;
+    }
+    .share-links>a {
+        margin:0px 8px;
+    }
+    .share-btn {
+        display: inline-block;
+        color: #ffffff;
+        border: none;
+        padding: 0.2em 0.8em;
+        outline: none;
+        text-align: center;
+        font-size: 0.9em;
+        margin: 0 0.2em;
+      }
+}
+
+@media only screen and (max-width: 600px) {
+    .navbar {
+        color: #f1eeee;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #000000;
+        border-bottom: .5px solid #f1eeee;
+    }
+    .navbar>div {
+        padding: 0px 10px;
+    }
+    #logo {
+        height: 35px;
+        width: 35px;
+        padding-top: 5px;
+        padding-bottom: 6px;
+        padding-right: 5px;
+    }
+    #name {
+        padding-top: 5px;
+        height: 35px;
+        width: 90px;
+    }
+    .account-type {
+        font-size: 12px;
+    }
+    
+    .main {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 0px 0px;
+    }
+    .acc-info>div {
+        padding: 0px 20px;
+    }
+    #profile-pic {
+        border-radius: 50%;
+        width: 90px;
+        height: 90px;
+        padding: 5px;
+    }
+    
+    .profile-info-sec {
+        color: white;
+        font-size: 14px;
+    }
+    
+    .profile-info-sec>p {
+        padding: 5px;
+    }
+    .posts {
+        padding-top: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .posts>div{
+        max-width: 100%;
+    }
+    .post-image {
+        height: 380px;
+        width: 100%;
+        padding-bottom: 20px;
+    }
+    .share-links {
+        text-align: center;
+        color: white;
+        border-bottom: 1px solid white;
+        padding: 10px;
+    }
+    .share-links>a {
+        margin:5px 4px;
+    }
+    .share-btn {
+        display: inline-block;
+        color: #ffffff;
+        border: none;
+        padding: 0.1em 0.6em;
+        outline: none;
+        text-align: center;
+        font-size: 0.9em;
+        margin: 0 0.2em;
+      }
 }
